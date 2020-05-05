@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's for Dinner?</title>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Personal CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Animate.CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/2a86921d92.js" crossorigin="anonymous"></script>
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Beef<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pork</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Chicken</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Seafood</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-3 ctrText">What's for Dinner?</h1>
+        </div>
+
+        <div id="chooseMeal" class="row choosemeal">
+            <div class="col-md-12">
+                <h3 class="display-4 ctrText choose">Please choose a meal</h3>
+            </div>
+        </div>
+        <div id="refreshDiv" class="row refreshrow">
+            <div class="col-md-12 refreshmeals">
+                <button id="refreshMealBtn" class="btn btn-primary refresh"><i class="fas fa-redo"></i> Load 4 new meals</button>
+            </div>
+        </div>
+        <div id="mealRow1" class="row mealrow">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <!-- Meal 1 button -->
+                <button id="mealButton1" type="button" class="btn" data-toggle="modal" data-target="#mealModal1">
+                    <div class="card">
+                        <div class="card-header">
+                            <!-- Display meal 1 title here -->
+                            <p id="meal1Title" class="ctrText">placeholder meal name</p>
+                        </div>
+                        <div class="card-body">
+                            <!-- Display Meal 1 IMG here -->
+                            <img id="meal1IMG" src="Assets/placeholder.jpg" alt="Beef">
+                        </div>
+                    </div>
+                </button>
+                <!-- Meal 1 Modal -->
+                <div class="modal fade" id="mealModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <!-- Display meal 1 title here -->
+                        <h5 id="meal1TitleModal" class="modal-title">Meal 1 Title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <!-- Display Meal 1 IMG here -->
+                                    <div class="col-md-4">
+                                        <img id="meal1IMGModal" src="Assets/placeholder.jpg" alt="Beef">
+                                    </div>
+                                    <!-- Display Meal 1 Instructions here  -->
+                                    <div class="col-md-8">
+                                        <h5>Instructions: </h5>
+                                        <!-- Display Meal 1 Instructions here  -->
+                                        <p id="meal1Instructions">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus aperiam nemo aliquam quo dolore ipsa excepturi repellendus ullam aliquid illo veniam iure consequatur a, temporibus odio tenetur quasi quam cumque.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-md-4">
+                <!-- Meal 2 button -->
+                <button id="mealButton2" type="button" class="btn" data-toggle="modal" data-target="#mealModal2">
+                    <div class="card">
+                        <div class="card-header">
+                            <!-- Display meal 2 title here -->
+                            <p id="meal2Title" class="ctrText">placeholder meal name</p>
+                        </div>
+                        <div class="card-body">
+                            <!-- Display Meal 2 IMG here -->
+                            <img id="meal2IMG" src="Assets/placeholder.jpg" alt="Beef">
+                        </div>
+                    </div>
+                </button>
+                <!-- Meal 2 Modal -->
+                <div class="modal fade" id="mealModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <!-- Display meal 2 title here -->
+                        <h5 id="meal2TitleModal" class="modal-title">Meal 2 Title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <!-- Display Meal 2 IMG here -->
+                                    <div class="col-md-4">
+                                        <img id="meal2IMGModal" src="Assets/placeholder.jpg" alt="Beef">
+                                    </div>
+                                    <!-- Display Meal 2 Instructions here  -->
+                                    <div class="col-md-8">
+                                        <h5>Instructions: </h5>
+                                        <!-- Display Meal 2 Instructions here  -->
+                                        <p id="meal2Instructions">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus aperiam nemo aliquam quo dolore ipsa excepturi repellendus ullam aliquid illo veniam iure consequatur a, temporibus odio tenetur quasi quam cumque.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div id="mealRow2" class="row mealrow">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <!-- Meal 3 button -->
+                <button id="mealButton3" type="button" class="btn" data-toggle="modal" data-target="#mealModal3">
+                    <div class="card">
+                        <div class="card-header">
+                            <!-- Display meal 3 title here -->
+                            <p id="meal3Title" class="ctrText">placeholder meal name</p>
+                        </div>
+                        <div class="card-body">
+                            <!-- Display Meal 3 IMG here -->
+                            <img id="meal3IMG" src="Assets/placeholder.jpg" alt="Beef">
+                        </div>
+                    </div>
+                </button>
+                <!-- Meal 3 Modal -->
+                <div class="modal fade" id="mealModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <!-- Display meal 3 title here -->
+                        <h5 id="meal3TitleModal" class="modal-title">Meal 3 Title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <!-- Display Meal 3 IMG here -->
+                                    <div class="col-md-4">
+                                        <img id="meal3IMGModal" src="Assets/placeholder.jpg" alt="Beef">
+                                    </div>
+                                    <!-- Display Meal 3 Instructions here  -->
+                                    <div class="col-md-8">
+                                        <h5>Instructions: </h5>
+                                        <!-- Display Meal 3 Instructions here  -->
+                                        <p id="meal3Instructions">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus aperiam nemo aliquam quo dolore ipsa excepturi repellendus ullam aliquid illo veniam iure consequatur a, temporibus odio tenetur quasi quam cumque.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <!-- Meal 4 button -->
+                <button id="mealButton4" type="button" class="btn" data-toggle="modal" data-target="#mealModal4">
+                    <div class="card">
+                        <div class="card-header">
+                            <!-- Display meal 4 title here -->
+                            <p id="meal4Title" class="ctrText">placeholder meal name</p>
+                        </div>
+                        <div class="card-body">
+                            <!-- Display Meal 4 IMG here -->
+                            <img id="meal4IMG" src="Assets/placeholder.jpg" alt="Beef">
+                        </div>
+                    </div>
+                </button>
+                <!-- Meal 4 Modal -->
+                <div class="modal fade" id="mealModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <!-- Display meal 4 title here -->
+                        <h5 id="meal4TitleModal" class="modal-title">Meal 4 Title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <!-- Display Meal 4 IMG here -->
+                                    <div class="col-md-4">
+                                        <img id="meal1IMGModal" src="Assets/placeholder.jpg" alt="Beef">
+                                    </div>
+                                    <!-- Display Meal 4 Instructions here  -->
+                                    <div class="col-md-8">
+                                        <h5>Instructions: </h5>
+                                        <!-- Display Meal 4 Instructions here  -->
+                                        <p id="meal4Instructions">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus aperiam nemo aliquam quo dolore ipsa excepturi repellendus ullam aliquid illo veniam iure consequatur a, temporibus odio tenetur quasi quam cumque.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="display-4 ctrText">Recommended Drinks</h3>
+            </div>
+        </div>
+
+        <div id="refreshDiv" class="row refreshrow">
+            <div class="col-md-12 refreshmeals">
+                <button id="refreshdDrinkBtn" class="btn btn-primary refresh"><i class="fas fa-redo"></i> Load 4 new meals</button>
+            </div>
+        </div>
+
+        <div id="displayDrinks" class="row">
+            <!-- Drink 1 -->
+            <div id="drink1" class="col-md-4">
+                <button id="drinkButton1" type="button" class="btn" data-toggle="modal" data-target="#drinkModal1">
+                    <div class="card">
+                        <div class="card-header">
+                            <!-- Display drink 1 title here -->
+                            <p id="drink1Title" class="ctrText">drink 1 name</p>
+                        </div>
+                        <div class="card-body">
+                            <!-- Display drink 1 IMG here -->
+                            <img id="drink1IMG" src="Assets/drinkplaceholder.jpg" alt="drink">
+                        </div>
+                    </div>
+                </button>
+                <!-- drink 1 Modal -->
+                <div class="modal fade" id="drinkModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <!-- Display drink 1 title here -->
+                        <h5 id="drink1TitleModal" class="modal-title">drink 1 Title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <!-- Display drink 1 IMG here -->
+                                    <div class="col-md-4">
+                                        <img id="drink1IMGModal" src="Assets/drinkplaceholder.jpg" alt="drink">
+                                    </div>
+                                    <!-- Display Meal 1 Instructions here  -->
+                                    <div class="col-md-8">
+                                        <h5>Instructions: </h5>
+                                        <!-- Display drink 1 Instructions here  -->
+                                        <p id="drink1Instructions">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus aperiam nemo aliquam quo dolore ipsa excepturi repellendus ullam aliquid illo veniam iure consequatur a, temporibus odio tenetur quasi quam cumque.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drink 2 -->
+            <div id="drink2" class="col-md-4">
+                <button id="drinkButton2" type="button" class="btn" data-toggle="modal" data-target="#drinkModal2">
+                    <div class="card">
+                        <div class="card-header">
+                            <!-- Display drink 1 title here -->
+                            <p id="drink2Title" class="ctrText">drink 2 name</p>
+                        </div>
+                        <div class="card-body">
+                            <!-- Display drink 2 IMG here -->
+                            <img id="drink2IMG" src="Assets/drinkplaceholder.jpg" alt="drink">
+                        </div>
+                    </div>
+                </button>
+                <!-- drink 2 Modal -->
+                <div class="modal fade" id="drinkModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <!-- Display drink 2 title here -->
+                        <h5 id="drink2TitleModal" class="modal-title">drink 2 Title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <!-- Display drink 2 IMG here -->
+                                    <div class="col-md-4">
+                                        <img id="drink2IMGModal" src="Assets/drinkplaceholder.jpg" alt="drink">
+                                    </div>
+                                    <!-- Display Meal 2 Instructions here  -->
+                                    <div class="col-md-8">
+                                        <h5>Instructions: </h5>
+                                        <!-- Display drink 2 Instructions here  -->
+                                        <p id="drink2Instructions">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus aperiam nemo aliquam quo dolore ipsa excepturi repellendus ullam aliquid illo veniam iure consequatur a, temporibus odio tenetur quasi quam cumque.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drink 3 -->
+            <div id="drink3" class="col-md-4">
+                <button id="drinkButton3" type="button" class="btn" data-toggle="modal" data-target="#drinkModal3">
+                    <div class="card">
+                        <div class="card-header">
+                            <!-- Display drink 3 title here -->
+                            <p id="drink3Title" class="ctrText">drink 3 name</p>
+                        </div>
+                        <div class="card-body">
+                            <!-- Display drink 3 IMG here -->
+                            <img id="drink3IMG" src="Assets/drinkplaceholder.jpg" alt="drink">
+                        </div>
+                    </div>
+                </button>
+                <!-- drink 3 Modal -->
+                <div class="modal fade" id="drinkModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <!-- Display drink 3 title here -->
+                        <h5 id="drink3TitleModal" class="modal-title">drink 3 Title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <!-- Display drink 3 IMG here -->
+                                    <div class="col-md-4">
+                                        <img id="drink3IMGModal" src="Assets/drinkplaceholder.jpg" alt="drink">
+                                    </div>
+                                    <!-- Display Meal 3 Instructions here  -->
+                                    <div class="col-md-8">
+                                        <h5>Instructions: </h5>
+                                        <!-- Display drink 3 Instructions here  -->
+                                        <p id="drink3Instructions">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus aperiam nemo aliquam quo dolore ipsa excepturi repellendus ullam aliquid illo veniam iure consequatur a, temporibus odio tenetur quasi quam cumque.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="sticky-footer" class="py-4">
+        <div class="container text-center">
+          <small>Copyright &copy; Kyle Cooper, Erica Cannedy, Kobe Matias 2020</small>
+        </div>
+    </footer>
+    <!-- Bootstrap JS -->
+
+    <script src="beefmeals.js"></script>
+    <script src="drink.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
