@@ -1,6 +1,6 @@
 $(document).ready(function () {
     function getMeal1 () {
-      var queryURL = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood &apikey=1";
+      var queryURL = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood&apikey=1";
   //     var globalMeals=[];
   //     var randomMeal= globalMeals[Math.floor(Math.random() * globalMeals.length)];
   // console.log("this is the random meal" + randomMeal);

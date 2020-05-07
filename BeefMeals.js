@@ -1,46 +1,46 @@
 $(document).ready(function () {
+
+    var Meal1Title= $("#meal1TItle");
+    var Meal1IMG= $("#meal1IMG");
+    var Meal1TitleModal= $("#meal1TItleModal");
+    var Meal1Instruction= $("#meal1Instructions");
+    var Meal1IMGModal= $("#meal1IMGModal");
+    var Meal1Ingredients= $("#meal1Ingredients");
+
   function getMeal1 () {
     var queryURL = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef&apikey=1";
-    var globalMeals=[];
-//     var randomMeal= globalMeals[Math.floor(Math.random() * globalMeals.length)];
-// console.log("this is the random meal" + randomMeal);
-for (var i=1; i<=4; i++){
-    globalMeals.push(
+
         $.ajax({
         url: queryURL,
         method: "GET",
-        }),
-    );
+        }).then(function (response) {
+            var meal=response.meals;
+      console.log(meal);
+      meal[Math.floor(Math.random() * meal.length)];
+      for (var i=1; i<=4; i++){
+            Meal1Title.text(meal.strMeal);
+            Mral1TItleModal.text(meal.strMeal);
+//is a while loop needed?
+            var mealstrIMG= meal.strMealThumb;
+            Meal1IMG.attr("src", mealstrIMG);
+            Meal1IMGModal.attr("src", mealstrIMG);
+            var mealId= response.meals[0].stridMeal;
 
-    $("#mealButton1").html('');
-    $("#mealButton2").html('');
-    $("#mealButton3").html('');
-    $("#mealButton4").html('');
+            // $.ajax({
+            //     url: "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + mealId,
+            //     methond: "GET",
+            // }).then(function(response){
+            //     var Meal1Ingredients= $("#meal1Ingredients");
+            //     meal=response.meals[0]
+            //     Meal1Ingredients.text(meal.strIngredient);
 
-}
-
-Promise.all(globalMeals)
-    .then(function (responses) {
-      console.log(responses);
-        for(var k=0; k<responses.length; k++) {
-            var Meals= responses[k].globalMeals[0];
-            console.log(Meals);
-            var mealImg= response.meals[0].strMealThumb;
-        }
+            // });
+        });
   
-    // var globalMeals=[];
-    //    var randomMeal= globalMeals[Math.floor(Math.random() * globalMeals.length)];
-    //    console.log("this is the random meal" + randomMeal);
+    
        
-       
-      var mealId= response.meals[0].stridMeal;
-      var mealTitle= response.meals[0].strMeal;
-      $("#meal1Title").text(mealTitle);
-      var imageEl = $("<img>");
-      imageEl.attr("src", mealImg);
-      $("#meal1img").append(imageEl);
-    });
-  };
-  getMeal1();
+    }
+    getMeal1();
+      
+ 
 });
-//need second api for full description by ID https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + mealId
