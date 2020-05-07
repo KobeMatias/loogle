@@ -23,7 +23,7 @@ $(document).ready(function(){
                     var drink = responses[j].drinks[0];
                     console.log(drink);
 
-                    $('#drink' + j).append('<p><strong>Name: ' + drink.strDrink + '</strong></p>');
+                    $('#drink1Title' + j).append('<p><strong>Name: ' + drink.strDrink + '</strong></p>');
                     $('#drink' + j).append('<h3>Ingredients</h3>');
 
                     var k = 1;
