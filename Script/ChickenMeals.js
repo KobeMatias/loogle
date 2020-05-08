@@ -1,5 +1,43 @@
 $(document).ready(function () {
 
+  var refreshBtn = $("#refreshMealBtn");
+  var refreshDrinkBtn = $("#refreshDrinkBtn");
+
+  function refreshanim(rotate) {
+    anime.remove(refreshBtn);
+    anime({
+      targets: '#mealRefresh',
+      rotate: rotate,
+      easing: 'cubicBezier(.5, .05, .1, .3)',
+      direction: 'normal'
+    });
+  }
+  function drinkrefreshanim(rotate2) {
+    anime.remove(refreshBtn);
+    anime({
+      targets: '#drinkRefresh',
+      rotate: rotate2,
+      easing: 'cubicBezier(.5, .05, .1, .3)',
+      direction: 'normal'
+    });
+  }
+  function enterButton() { refreshanim(360) };
+  function leaveButton() { refreshanim(0) };
+  function enterdrinkButton() { drinkrefreshanim(360) };
+  function leavedrinkButton() { drinkrefreshanim(0) };
+  refreshBtn.mouseenter(function() {
+    enterButton();
+  })
+  refreshBtn.mouseleave(function() {
+    leaveButton();
+  })
+  refreshDrinkBtn.mouseenter(function() {
+    enterdrinkButton();
+  })
+  refreshDrinkBtn.mouseleave(function() {
+    leavedrinkButton();
+  })
+
   var Meal1Title= $("#meal1Title");
   var Meal1IMG= $("#meal1img");
   var Meal1TitleModal= $("#meal1TitleModal");
