@@ -8,7 +8,7 @@ $(document).ready(function () {
   var Meal1Ingredients= $("#meal1Ingredients");
 
 function getMeal1 () {
-  var queryURL = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood&apikey=1";
+  var queryURL = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken&apikey=1";
 
       $.ajax({
       url: queryURL,
@@ -56,7 +56,7 @@ function getMeal1 () {
   var Meal2Ingredients= $("#meal2Ingredients");
 
 function getMeal2 () {
-  var queryURL = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef&apikey=1";
+  var queryURL = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken&apikey=1";
 
       $.ajax({
       url: queryURL,
@@ -104,7 +104,7 @@ function getMeal2 () {
   var Meal3Ingredients= $("#meal3Ingredients");
 
 function getMeal3 () {
-  var queryURL = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef&apikey=1";
+  var queryURL = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken&apikey=1";
 
       $.ajax({
       url: queryURL,
@@ -152,7 +152,7 @@ function getMeal3 () {
   var Meal4Ingredients= $("#meal4Ingredients");
 
 function getMeal4() {
-  var queryURL = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef&apikey=1";
+  var queryURL = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken&apikey=1";
 
       $.ajax({
       url: queryURL,
