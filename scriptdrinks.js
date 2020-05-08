@@ -1,34 +1,7 @@
 
 
 $(document).ready(function(){
-<<<<<<< HEAD
-    $("#get-drinks").on("click",function () {
-        var drinks = [];
 
-        for (var i = 1; i <= 3; i++) {
-            drinks.push(
-                $.ajax({
-                    url: "https://www.thecocktaildb.com/api/json/v1/1/random.php",
-                    method: "GET",
-                }),
-            );
-
-            $('#drink0').html('');
-            $('#drink1').html('');
-            $('#drink2').html('');
-        }
-
-        Promise.all(drinks)
-            .then(function(responses) {
-                for (var j = 0; j < responses.length; j++) {
-                    var drink = responses[j].drinks[0];
-                    console.log(drink);
-
-                    $('#drink1Title' + j).append('<p><strong>Name: ' + drink.strDrink + '</strong></p>');
-                    $('#drink' + j).append('<h3>Ingredients</h3>');
-
-                    var k = 1;
-=======
     var Drink1Title = $("#drink1Title");
     var Drink1IMG = $("#drink1IMG");
     var Drink1TitleModal = $("#drink1TitleModal");
@@ -48,7 +21,7 @@ $(document).ready(function(){
                 Drink1TitleModal.text(drink.strDrink);
                     
                 var k = 1;
->>>>>>> ee71c9156396a164bec859e3a0b5a7ee423c9820
+
                     while (drink['strIngredient' + k] != null) {
                         // console.log(drink['strIngredient' + k])
                         // console.log(stringredient);
@@ -164,8 +137,3 @@ $(document).ready(function(){
     getDrinks2();
     getDrinks3();
 })
-
-
-
-
-
