@@ -1,5 +1,3 @@
-
-
 $(document).ready(function(){
 
     var Drink1Title = $("#drink1Title");
@@ -106,7 +104,7 @@ $(document).ready(function(){
             });
     };
 
-    $("#refreshdDrinkBtn").on("click", function() {
+    $("#refreshDrinkBtn").on("click", function() {
         Drink1Title.empty();
         Drink1IMG.empty();
         Drink1TitleModal.empty();
