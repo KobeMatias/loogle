@@ -190,7 +190,7 @@ function getMeal3 () {
   var Meal4Ingredients= $("#meal4Ingredients");
 
 function getMeal4() {
-  var queryURL = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef&apikey=1";
+  var queryURL = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood&apikey=1";
 
       $.ajax({
       url: queryURL,
